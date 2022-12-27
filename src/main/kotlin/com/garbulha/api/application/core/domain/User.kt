@@ -6,6 +6,7 @@ data class User(
     var id: UUID,
     var name:  String,
     var cpf: String,
+    var address: Address,
     var isValid: Boolean = false
 )
 
