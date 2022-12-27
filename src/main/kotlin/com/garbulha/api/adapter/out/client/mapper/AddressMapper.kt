@@ -6,5 +6,5 @@ import org.mapstruct.Mapper
 
 @Mapper(componentModel = "spring")
 interface AddressMapper {
-    fun converterToAddress(addressResponse: AddressResponse): Address
+    fun toAddress(addressResponse: AddressResponse): Address
 }

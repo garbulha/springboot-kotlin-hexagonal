@@ -16,10 +16,8 @@ class FindAddressByZipCodeAdapter : FindAddressByZipCodeOutputPort{
     @Autowired
     private lateinit var addressMapper: AddressMapper
 
-    override fun find(zipCode: String): Address {
-        val addressResponse = findAddress.find(zipCode)
+    override fun find(zipCode: String): Address =
+        addressMapper.toAddress(findAddress.find(zipCode))
 
-        return addressMapper.converterToAddress(addressResponse)
-    }
 
 }
