@@ -1,5 +1,6 @@
 package com.garbulha.api.adapter.out.client
 
+import com.garbulha.api.adapter.out.client.reponse.AddressResponse
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -10,5 +11,5 @@ import org.springframework.web.bind.annotation.PathVariable
 )
 interface FindAddressByZipCode {
     @GetMapping("/{:zipCode}")
-    fun find(@PathVariable("zipCode") zipCode: String)
+    fun find(@PathVariable("zipCode") zipCode: String) : AddressResponse
 }

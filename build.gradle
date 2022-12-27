@@ -21,8 +21,14 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:4.0.0'
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:4.0.0'
 	implementation 'org.jetbrains.kotlin:kotlin-reflect'
 	implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+	implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+	testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final' // if you are using mapstruct in test code
+
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
