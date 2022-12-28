@@ -11,5 +11,4 @@ class FindUserByIdConfig {
     @Bean
     fun findUserByIdUseCase(findUserByIdAdapter: FindUserByIdAdapter) = FindUserByIdUserCase(findUserByIdAdapter)
 
-
 }

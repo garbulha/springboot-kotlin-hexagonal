@@ -14,10 +14,8 @@ interface UserMapper {
         Mapping(target = "id", ignore = true),
         Mapping(target = "address", ignore = true),
         Mapping(target = "isValid", ignore = true),
-        Mapping(target = "address", ignore = true)
     )
     fun toUser(userRequest: UserRequest) : User
 
-    @Mapping(target = "id", ignore = true)
     fun toUserResponse(user: User): UserResponse
 }
