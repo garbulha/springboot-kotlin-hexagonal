@@ -13,7 +13,5 @@ class InsertUserConfig {
     fun insertUserUseCase(
         findAddressByZipCodeAdapter: FindAddressByZipCodeAdapter,
         insertUserAdapter: InsertUserAdapter
-    ): InsertUserUseCase {
-        return InsertUserUseCase(findAddressByZipCodeAdapter, insertUserAdapter)
-    }
+    ): InsertUserUseCase = InsertUserUseCase(findAddressByZipCodeAdapter, insertUserAdapter)
 }

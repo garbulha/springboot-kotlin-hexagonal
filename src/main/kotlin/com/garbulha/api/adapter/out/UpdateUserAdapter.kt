@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
 @Component
-class UpdateCustomerAdapter: UpdateUserOutputPort {
+class UpdateUserAdapter: UpdateUserOutputPort {
 
     @Autowired
     private lateinit var userRepository: UserRepository
