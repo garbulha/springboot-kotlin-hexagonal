@@ -2,7 +2,7 @@ package com.garbulha.api.application.core.domain
 
 
 data class User(
-    var id: Int,
+    var id: String,
     var name:  String,
     var cpf: String,
     var address: Address,
@@ -10,7 +10,7 @@ data class User(
 )
 
 data class Address(
-    var id: Int,
+    var id: String,
     var address: String,
     var city: String,
     var state: String
