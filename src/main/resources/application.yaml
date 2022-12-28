@@ -1,0 +1,17 @@
+api:
+  address:
+    base_url: https://api.com.br
+  currency:
+    key: ytk7aymeOeFL9SH5cqZ3wRixITlKrcqs
+    base_url: https://api.apilayer.com
+spring:
+   datasource:
+     url: jdbc:postgresql://localhost:5432/postgres
+     username: postgres
+     password: pwd123
+   jpa:
+     show-sql: true
+     properties:
+       hibernate:
+         format_sql: true
+         dialect: org.hibernate.dialect.PostgreSQL81Dialect

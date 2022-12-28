@@ -3,8 +3,8 @@ package com.garbulha.api.adapter.out.repository.entity
 import com.garbulha.api.application.core.domain.Address
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
-import org.springframework.data.annotation.Id
-import java.util.UUID
+import jakarta.persistence.Id
+import jakarta.persistence.OneToMany
 
 @Entity(name = "TB_USER")
 data class UserEntity (
@@ -15,7 +15,8 @@ data class UserEntity (
     @Column(nullable = false)
     var cpf: String,
     @Column(nullable = false)
-    var address: Address,
+    @OneToMany
+    var addresses: List<AddressEntity>,
     @Column(nullable = false)
     var isValid: Boolean
 )

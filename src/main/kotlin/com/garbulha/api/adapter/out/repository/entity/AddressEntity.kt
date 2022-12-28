@@ -1,14 +1,10 @@
 package com.garbulha.api.adapter.out.repository.entity
 
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import org.springframework.data.annotation.Id
-import java.util.UUID
+import jakarta.persistence.*
 
 @Entity(name = "TB_ADDRESS")
 data class AddressEntity (
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Int,

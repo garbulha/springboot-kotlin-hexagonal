@@ -8,4 +8,6 @@ import org.mapstruct.Mapper
 interface UserEntityMapper {
 
     fun toUserEntity(user: User): UserEntity
+
+    fun toUser(userEntity: UserEntity): User
 }
