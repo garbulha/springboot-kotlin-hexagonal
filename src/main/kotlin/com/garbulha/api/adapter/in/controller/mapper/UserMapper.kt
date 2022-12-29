@@ -12,7 +12,6 @@ import org.springframework.data.jpa.domain.AbstractPersistable_.id
 interface UserMapper {
     @Mappings(
         Mapping(target = "id", ignore = true),
-        Mapping(target = "address", ignore = true),
         Mapping(target = "isValid", ignore = true),
     )
     fun toUser(userRequest: UserRequest) : User

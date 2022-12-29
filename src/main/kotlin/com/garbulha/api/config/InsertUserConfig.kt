@@ -1,6 +1,7 @@
 package com.garbulha.api.config
 
 import com.garbulha.api.adapter.out.FindAddressByZipCodeAdapter
+import com.garbulha.api.adapter.out.InsertAddressAdapter
 import com.garbulha.api.adapter.out.InsertUserAdapter
 import com.garbulha.api.application.core.usecase.InsertUserUseCase
 import org.springframework.context.annotation.Bean
@@ -12,6 +13,7 @@ class InsertUserConfig {
     @Bean
     fun insertUserUseCase(
         findAddressByZipCodeAdapter: FindAddressByZipCodeAdapter,
-        insertUserAdapter: InsertUserAdapter
-    ): InsertUserUseCase = InsertUserUseCase(findAddressByZipCodeAdapter, insertUserAdapter)
+        insertUserAdapter: InsertUserAdapter,
+        insertAddressAdapter: InsertAddressAdapter
+    ): InsertUserUseCase = InsertUserUseCase(findAddressByZipCodeAdapter, insertUserAdapter, insertAddressAdapter)
 }

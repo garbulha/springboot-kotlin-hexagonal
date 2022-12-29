@@ -1,18 +1,23 @@
+
 package com.garbulha.api.adapter.out.repository.entity
 
 import jakarta.persistence.*
 
-@Entity(name = "TB_ADDRESS")
+@Entity
 data class AddressEntity (
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Int,
+    var id: Int? = null,
 
-    @Column(nullable = false)
+    @Column
     var address: String,
-    @Column(nullable = false)
+    @Column
     var city: String,
-    @Column(nullable = false)
-    var state: String
+    @Column
+    var state: String,
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    var userEntity: UserEntity
 )

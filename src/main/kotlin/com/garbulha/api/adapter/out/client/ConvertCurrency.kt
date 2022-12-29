@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient
 
 @FeignClient(
     name = "ConvertCurrency",
-    url = "\${api.currency.base_url}"
+    url = "http://localhost:8080"
 )
 interface ConvertCurrency {
 

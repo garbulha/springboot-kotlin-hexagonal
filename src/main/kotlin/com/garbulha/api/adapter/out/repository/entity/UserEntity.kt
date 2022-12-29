@@ -1,22 +1,19 @@
 package com.garbulha.api.adapter.out.repository.entity
 
-import com.garbulha.api.application.core.domain.Address
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.Id
-import jakarta.persistence.OneToMany
+import jakarta.persistence.*
 
-@Entity(name = "TB_USER")
+@Entity
 data class UserEntity (
     @Id
-    var id: Int,
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Int? = null,
+
     @Column(nullable = false)
     var name:  String,
+
     @Column(nullable = false)
     var cpf: String,
-    @Column(nullable = false)
-    @OneToMany
-    var addresses: List<AddressEntity>,
+
     @Column(nullable = false)
     var isValid: Boolean
 )

@@ -13,8 +13,7 @@ class UpdateUserUseCase(
 ): UpdateUserInputPort {
 
      override fun update(user: User, zipCode: String){
-         findUserByIdInputPort.find(user.id)
-         user.address = findAddressByZipCodeOutputPort.find(zipCode)
+         user.id?.let { findUserByIdInputPort.find(it) }
          updateUserOutputPort.update(user)
     }
 }
